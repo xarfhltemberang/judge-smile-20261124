@@ -23,7 +23,7 @@ def main() -> None:
     assert ENTRY.strip(), "entry must not be only white space"
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        f.write(ENTRY)
+        f.write(ENTRY + "\n")  # exactly one trailing newline
 
 
 if __name__ == "__main__":
